@@ -1,0 +1,33 @@
+.footer {
+  grid-column: 1/-1;
+  background-color: $color-primary-tertiary;
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+
+  &-containers {
+    color: $color-white;
+    text-align: center;
+    h4 {
+      font-size: $h4-size;
+      margin-bottom: 2rem;
+    }
+    &-ul {
+      display: flex;
+      gap: 5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
+      li {
+        a {
+          color: inherit;
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

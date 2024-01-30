@@ -1,0 +1,6 @@
+.container {
+  display: grid;
+  grid-template-rows: 8rem 90dvh;
+  grid-auto-columns: min-content;
+  grid-template-columns: [full-start] repeat(8, 1fr) [full-end];
+}

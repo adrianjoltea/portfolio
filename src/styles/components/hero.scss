@@ -1,0 +1,56 @@
+.hero {
+  grid-row: 2 / 3;
+  grid-column: 2 / 8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: $color-white;
+    h4 {
+      font-size: $h4-size;
+      font-weight: 900;
+    }
+    h1 {
+      font-size: $h1-size;
+      font-weight: 800;
+    }
+    p {
+      font-size: $p-size;
+    }
+    span {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-primary-dark,
+        $color-primary-tertiary
+      );
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: inherit;
+      padding: 2rem;
+      background-color: $color-primary-secondary;
+      width: 15rem;
+      border-radius: 1rem;
+      text-align: center;
+      font-size: 1.6rem;
+    }
+  }
+  &-img {
+    max-width: 40rem;
+    max-height: 40rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+}
