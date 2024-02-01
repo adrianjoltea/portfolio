@@ -4,7 +4,11 @@ function Project1() {
   return (
     <>
       <div className="project-container-1">
-        <img src={img1} alt="Project 1" className="image-project" />
+        <div className="image-position">
+          <div className="image-project">
+            <img src={img1} alt="Project 1" />
+          </div>
+        </div>
         <div>
           <h5>Car Rental</h5>
           <p>

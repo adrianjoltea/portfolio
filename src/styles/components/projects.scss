@@ -32,19 +32,28 @@
 
       img {
         max-width: 30rem;
-        border: 5px solid red;
+        border: 5px solid $gray-300;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
       }
     }
   }
 }
-.image-project::before {
+.image-position {
+  position: relative;
+}
+
+.image-project::after {
   content: "";
-  border-bottom: 5px solid green;
-  width: 100%;
-  height: 5px;
+  border-bottom: 7px solid $gray-300;
+  width: 140%;
   display: block;
+  margin: 0 auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .btn-container {
   margin-top: 3rem;
