@@ -131,7 +131,11 @@ html {
   font-size: 3rem;
   text-decoration: none;
   position: relative;
-  z-index: 30; }
+  z-index: 30;
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .toggle-mobile {
+      display: block; } }
 
 .hero {
   grid-row: 2 / 3;
