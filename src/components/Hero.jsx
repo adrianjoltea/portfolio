@@ -9,10 +9,7 @@ function Hero() {
         <h1>
           I am an <span>Front-end Developer</span>
         </h1>
-        <p>
-          I am a front-end web developer. I can provide clean code and pixel
-          perfect design
-        </p>
+        <p>I can provide clean code and pixel perfect design</p>
         <a href="#projects">My Projects &rarr;</a>
       </div>
       <div className="hero-img">

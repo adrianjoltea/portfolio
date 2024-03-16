@@ -1,16 +1,29 @@
 import { useForm } from "react-hook-form";
 import ErrorForm from "./ErrorForm";
-import toast, { Toaster } from "react-hot-toast";
-
+import toast from "react-hot-toast";
+import emailjs from "emailjs-com";
 function Contact() {
   const { register, handleSubmit, formState, reset } = useForm();
 
   const { errors } = formState;
+  const serviceId = "service_flxj8gl";
+  const templateId = "template_i7gx5rx";
+  const userId = "HLZA867EaEZ4gSoNa";
 
   function onSubmit(data) {
-    console.log(data);
-    toast("This is not working yet bcs it requires some backend )))");
-    reset();
+    emailjs.send(serviceId, templateId, data, userId).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        toast.success("Email sent successfully!", {
+          position: "top-center",
+        });
+        reset();
+      },
+      function (error) {
+        console.error("FAILED...", error);
+        toast.error("Failed to send email. Please try again later.");
+      }
+    );
   }
   function onError(err) {
     console.log(err);
@@ -61,17 +74,6 @@ function Contact() {
             <ErrorForm>{errors?.text?.message}</ErrorForm>
           </div>
           <button className="contact-container-btn">Submit &rarr;</button>
-          <Toaster
-            position="top-center"
-            toastOptions={{
-              duration: 8000,
-              style: {
-                backgroundColor: "#373b41",
-                color: "#fff",
-                fontSize: "1.5rem",
-              },
-            }}
-          />
         </form>
       </div>
     </section>

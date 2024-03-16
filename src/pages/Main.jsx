@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import AboutMe from "../components/AboutMe";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
@@ -14,6 +15,17 @@ function Main() {
       <Projects />
       <Contact />
       <Footer />
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          duration: 8000,
+          style: {
+            backgroundColor: "#373b41",
+            color: "#fff",
+            fontSize: "1.5rem",
+          },
+        }}
+      />
     </>
   );
 }
